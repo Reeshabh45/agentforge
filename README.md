@@ -1,217 +1,295 @@
-# <Project Name>
+# AI Vibe Coding Template
 
-> A modern AI-powered platform designed to automate workflows, enhance productivity, and deliver a seamless user experience.
+> **A battle-tested project structure that gives AI coding agents the context they need to write better code.**
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Status](https://img.shields.io/badge/status-Active-success)
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
+Most AI coding assistants don't fail because they're bad at coding.
 
----
+They fail because they **lack context**.
 
-## Overview
+This repository provides a structured knowledge base that helps coding agents understand your product, architecture, design decisions, coding standards, implementation roadmap, and project memory before writing a single line of code.
 
-<Project Name> is an AI-first application that combines intelligent automation, modern web technologies, and scalable architecture to solve real-world problems.
-
-The project is built with maintainability, performance, and extensibility in mind, making it suitable for both personal and enterprise use.
+Whether you're using **Cursor, Claude Code, Codex, Gemini CLI, Windsurf, Cline, Roo Code, or any other AI coding assistant**, this template gives your AI the information it needs to produce cleaner, more consistent, and production-ready code.
 
 ---
 
-## Features
+# Why?
 
-- AI-powered automation
-- Modern responsive UI
-- Secure authentication
-- Modular backend architecture
-- RESTful API
-- Database integration
-- Scalable system design
-- Role-based access control
-- Logging and monitoring
-- Production-ready deployment
+Instead of saying
 
----
+> "Build me authentication."
 
-## Tech Stack
+Your AI already knows:
 
-### Frontend
+- why authentication exists
+- how your architecture works
+- which design patterns to follow
+- project conventions
+- implementation phases
+- UI guidelines
+- previous architectural decisions
+- preferred folder structure
+- coding rules
 
-- React / Next.js
-- TypeScript
-- Tailwind CSS
-
-### Backend
-
-- FastAPI / Node.js
-- Python
-- REST APIs
-
-### Database
-
-- PostgreSQL
-- Redis
-
-### AI
-
-- OpenAI
-- Claude
-- Gemini
-- Open-source LLMs
-
-### DevOps
-
-- Docker
-- GitHub Actions
-- Nginx
-- AWS / Azure / GCP
+The result is significantly better code generation with fewer corrections.
 
 ---
 
-## Project Structure
+# Repository Structure
 
 ```
-project/
-│
+.
 ├── docs/
+│   ├── PRD.md
+│   ├── architecture.md
+│   ├── design.md
+│   ├── rules.md
+│   ├── phases.md
+│   └── memory.md
+│
+├── skills/
+│   ├── fastapi.md
+│   ├── nextjs.md
+│   ├── react.md
+│   ├── docker.md
+│   ├── postgres.md
+│   └── ...
+│
 ├── frontend/
 ├── backend/
-├── tests/
-├── scripts/
-├── .github/
-├── README.md
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-## Documentation
+# Documentation
 
-| File | Description |
-|------|-------------|
-| PRD.md | Product requirements |
-| architecture.md | System architecture |
-| design.md | UI/UX guidelines |
-| rules.md | Development rules |
-| phases.md | Development roadmap |
-| memory.md | Project decisions and history |
+## PRD.md
 
----
+Defines the product.
 
-## Getting Started
+Contains
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/<username>/<repository>.git
-```
-
-### Install Dependencies
-
-```bash
-# Frontend
-cd frontend
-npm install
-
-# Backend
-cd ../backend
-pip install -r requirements.txt
-```
-
-### Run the Application
-
-```bash
-# Frontend
-npm run dev
-
-# Backend
-uvicorn app.main:app --reload
-```
+- Product vision
+- User stories
+- Features
+- Functional requirements
+- Acceptance criteria
 
 ---
 
-## Environment Variables
+## architecture.md
 
-Create a `.env` file.
+Explains the system.
 
-```env
-DATABASE_URL=
+Contains
 
-OPENAI_API_KEY=
+- Architecture diagrams
+- Data flow
+- API structure
+- Services
+- Database
+- Deployment
 
-JWT_SECRET=
+---
 
-REDIS_URL=
+## design.md
 
-API_BASE_URL=
+Defines UI/UX.
+
+Contains
+
+- Design system
+- Components
+- Colors
+- Typography
+- Layout
+- Accessibility
+
+---
+
+## rules.md
+
+Project-wide engineering rules.
+
+Examples
+
+- Naming conventions
+- Folder structure
+- API standards
+- Code quality
+- Security
+- Testing
+- Git workflow
+
+---
+
+## phases.md
+
+Roadmap for implementation.
+
+Allows AI to build features incrementally rather than generating an entire application at once.
+
+---
+
+## memory.md
+
+The project's long-term memory.
+
+Stores
+
+- architectural decisions
+- trade-offs
+- known issues
+- lessons learned
+- completed work
+- future ideas
+
+This prevents the AI from "forgetting" important context during long projects.
+
+---
+
+# Skills
+
+One of the biggest problems with AI coding agents is that they often know *what* to build but not *how your team builds it*.
+
+The `skills/` directory solves this.
+
+Each file teaches the AI how your project expects a specific technology to be used.
+
+Examples
+
+```
+skills/
+    fastapi.md
+    nextjs.md
+    react.md
+    docker.md
+    postgres.md
+    auth.md
+    testing.md
+    langgraph.md
+    qdrant.md
 ```
 
+Instead of repeatedly prompting:
+
+> "Use dependency injection."
+
+or
+
+> "Organize routers this way."
+
+or
+
+> "Always use async."
+
+You define it once inside the skill.
+
+The coding agent follows it everywhere.
+
 ---
 
-## Roadmap
+# Example
 
-- User Authentication
-- Dashboard
-- AI Workflows
-- Multi-Agent Support
-- Memory System
-- Notifications
-- Analytics
-- Admin Panel
-- Mobile Support
-- Enterprise Features
+Instead of saying
 
----
-
-## Testing
-
-```bash
-pytest
-
-npm test
+```
+Build a login API.
 ```
 
+The AI will already know
+
+- project architecture
+- authentication flow
+- API conventions
+- folder structure
+- error handling
+- response format
+- database organization
+
+because everything is documented.
+
 ---
 
-## Deployment
+# Recommended Skills
 
-The application can be deployed using:
+Backend
+
+- FastAPI
+- Django
+- Flask
+- Express
+- NestJS
+
+Frontend
+
+- React
+- Next.js
+- Vue
+- Angular
+
+AI
+
+- LangChain
+- LangGraph
+- LlamaIndex
+- OpenAI
+- Anthropic
+- Gemini
+
+Infrastructure
 
 - Docker
+- Kubernetes
+- Redis
+- PostgreSQL
+- MongoDB
+- Qdrant
+
+DevOps
+
+- GitHub Actions
+- Terraform
 - AWS
 - Azure
-- Google Cloud
-- DigitalOcean
-- Railway
-- Render
-- Vercel
+- GCP
 
 ---
 
-## Contributing
+# Supported AI Coding Agents
 
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-## License
-
-This project is licensed under the MIT License.
+- Cursor
+- Claude Code
+- OpenAI Codex
+- Gemini CLI
+- Windsurf
+- Roo Code
+- Cline
+- Continue
+- GitHub Copilot
 
 ---
 
-## Author
+# Getting Started
 
-**<Your Name>**
-
-GitHub: https://github.com/<username>
-
-LinkedIn: https://linkedin.com/in/<username>
-
-Website: https://yourwebsite.com
+1. Clone this repository.
+2. Fill in the files under `docs/`.
+3. Add technology-specific guides to `skills/`.
+4. Point your coding agent to these files.
+5. Start building.
 
 ---
+
+# Contributing
+
+Have a useful skill, architecture pattern, or project template?
+
+Open a Pull Request.
+
+The goal is to build a community-maintained knowledge base that helps AI coding assistants produce higher-quality software.
+
+---
+
+# License
+
+MIT
